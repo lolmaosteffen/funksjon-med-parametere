@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funksjon med parametere</title>
+    <style>
+        #mainDiv {
+            margin: 20px;
+            border: 1px solid black;
+        }
+
+        .innerDiv {
+            margin: 10px;
+            border: 1px solid black;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainDiv"></div>
+    <button onclick="skiftPåTing('purple', 60, 200,'Dette bler lilla')">trykk 1</button>
+    <button onclick="skiftPåTing('grey', 30, 100,'Dette bler grå')">trykk 2</button>
+
+    <script>
+        function skiftPåTing(color, width, height, text) {
+            document.getElementById("mainDiv").innerHTML =/*HTML*/ `
+           <div class="innerDiv" style="background-color:${color}; width:${width}%; height:${height}px;">
+            ${text}
+            </div>
+            `;
+        }
+    </script>
+</body>
+
+</html>
